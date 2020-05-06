@@ -77,7 +77,7 @@ def window(x): # x is the time duration
         df_sub = new_click1[(new_click1['request_time'] >= W1) & (new_click1['request_time'] <= W2)]
         idx_pairs = []
         window_size = len(df_sub.index)-1
-        indices = [word2idx[product] for product in df_sub['sku_ID']]
+        indices = [word2idx[product] for product in df_sub['brand_code']]
         for center_word_pos in range(len(indices)):
             # for each window position
             for w in range(-window_size, window_size + 1):
