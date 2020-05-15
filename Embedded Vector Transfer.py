@@ -149,7 +149,7 @@ class embeddingModel(nn.Module):
         self.linear_w = nn.Linear(embedding_dim, feature_size)
 
 
-    def forward(self, inputs1):
+    def forward(self, inputs1, inputs2):
         embeds = self.embeddings(inputs1)
         if inputs2 =='xfs':
             embeds = self.embeddings(inputs1)
@@ -173,6 +173,8 @@ losses = []
 loss_function = torch.nn.MSELoss()
 model = embeddingModel(EMBEDDING_DIM, USER_SIZE, FEATURE_SIZE)
 optimizer = optim.SGD(model.parameters(), lr=0.001)
+
+### f3 is the pre-processed dataframe containing reduced product vector, user one-hot encoding vector, user ID and timestamp information
 
 for epoch in range(10):
     total_loss = 0
