@@ -12,5 +12,6 @@ Model Transfer is inspired by transfer learning. This file contains the model tr
 Embedded vector transfer is about learning reduced product vector and reduced user vector. The file contains vector training process for products and users, as well as the pre-process parts. 
 
 Part II - Extracted Features
+
 For part II, there are 4 files that contains features extraction process. For simplicity, we only use 1 product as example. You may use the code for other productes' feature extraction. 
 
